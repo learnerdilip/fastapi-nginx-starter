@@ -1,9 +1,9 @@
 version: "3"
 services:
-  fleet_backend_v2:
+  fast-api-backend:
     build: .
-    image: fleet_backend_v2
-    container_name: fleet_backend_v2
+    image: fast-api-backend
+    container_name: fast-api-backend
     restart: always
     volumes:
       - ./app:/code/app
@@ -38,9 +38,9 @@ services:
       - ${KEY_PATH}:/etc/ssl/private/key.pem
     ports:
       - "443:443"
-      - "5000:5000"
+      - "80:80"
     depends_on:
-      - fleet_backend_v2
+      - fast-api-backend
     healthcheck:
       test: ["CMD", "curl", "-k", "-f", "https://localhost"]
       interval: 30s

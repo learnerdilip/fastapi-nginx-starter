@@ -1,0 +1,14 @@
+# temporary pythin generated files 
+__pycache__/
+.pytest_cache/
+
+.env
+
+# app logs/ temp files
+app.log
+test.db
+.vscode
+.venv
+
+# certificates
+*.pem
